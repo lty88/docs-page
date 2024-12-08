@@ -26,11 +26,11 @@ jobs:
         run: pnpm run build
 
       # 5. 清理 Git 工作区
-      - name: Cleanup Git workspace
+      - name: Pre-deployment cleanup
         run: |
           git worktree prune
           git gc --prune=now
-          rm -rf github-pages-deploy-action-temp-deployment-folder
+          rm -rf github-pages-deploy-action-temp-deployment-folder || true
 
       # 6. 设置文件夹权限
       - name: Set folder permissions
@@ -44,5 +44,6 @@ jobs:
           branch: gh-pages
           folder: build
           clean: true
-          workspace: ./custom-temp-folder
+          workspace: ./custom-temp-deployment-folder
+          debug: true
           token: ${{ secrets.GITHUB_TOKEN }}

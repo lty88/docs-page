@@ -62,8 +62,8 @@ const config: Config = {
     navbar: {
       title: "", // 不需要填
       logo: {
-        alt: "my-website.0 Logo", // Logo 描述
-        src: "img/favicon_with_title_igw.svg", // Logo 图片路径
+        alt: "my-website Logo", // Logo 描述
+        src: "img/logo.svg", // Logo 图片路径
       },
       items: [
         {

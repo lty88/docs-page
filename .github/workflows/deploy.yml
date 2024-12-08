@@ -25,25 +25,19 @@ jobs:
       - name: Build the website
         run: pnpm run build
 
-      # 5. 清理 Git 工作区
-      - name: Pre-deployment cleanup
+      # 5. 强制清理 Git 缓存和工作区
+      - name: Cleanup Git workspace
         run: |
           git worktree prune
           git gc --prune=now
           rm -rf github-pages-deploy-action-temp-deployment-folder || true
 
-      # 6. 设置文件夹权限
-      - name: Set folder permissions
-        run: |
-          chmod -R +rw .
-
-      # 7. 部署到 GitHub Pages
+      # 6. 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: build
           clean: true
-          workspace: ./custom-temp-deployment-folder
           debug: true
           token: ${{ secrets.GITHUB_TOKEN }}

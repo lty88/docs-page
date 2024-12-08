@@ -32,7 +32,12 @@ jobs:
           git gc --prune=now
           rm -rf github-pages-deploy-action-temp-deployment-folder
 
-      # 6. 部署到 GitHub Pages
+      # 6. 设置文件夹权限
+      - name: Set folder permissions
+        run: |
+          chmod -R +rw .
+
+      # 7. 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:

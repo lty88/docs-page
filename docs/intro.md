@@ -74,19 +74,25 @@ my-website/
 `docusaurus.config.js` 是 Docusaurus 项目的核心配置文件，所有站点的全局配置都在此文件中进行。常见配置项如下：
 
 ```Bash
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
+
+// 这个配置文件在 Node.js 环境下运行，避免在这里使用客户端代码（浏览器 API、JSX 等）
+
 const config: Config = {
-  title: "流程平台2.0", // 网站标题
+  title: "my-website", // 网站标题
   tagline: "yunyi are cool", // 网站标语
-  favicon: "img/favicon_igw.svg", // 网站图标
+  favicon: "img/logo.svg", // 网站图标
 
   // 设置生产环境下站点的 URL
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://lty88.github.io",
   // 设置站点的基础路径，GitHub 页面部署时，通常为 '/<项目名>/'
-  baseUrl: "/",
+  baseUrl: "/docs-page/",
 
   // GitHub 页面部署配置，如果你不使用 GitHub Pages，可以不需要这些配置
-  organizationName: "cloudeasy", // 通常是 GitHub 组织名或用户名
-  projectName: "cloudeasy-docs", // 通常是你的仓库名称
+  organizationName: "lty88", // 通常是 GitHub 组织名或用户名
+  projectName: "docs-page", // 通常是你的仓库名称
 
   onBrokenLinks: "throw", // 如果链接断开，抛出错误
   onBrokenMarkdownLinks: "warn", // 如果 Markdown 链接断开，发出警告
@@ -132,8 +138,8 @@ const config: Config = {
     navbar: {
       title: "", // 不需要填
       logo: {
-        alt: "流程平台2.0 Logo", // Logo 描述
-        src: "img/favicon_with_title_igw.svg", // Logo 图片路径
+        alt: "my-website Logo", // Logo 描述
+        src: "img/logo.svg", // Logo 图片路径
       },
       items: [
         {
@@ -144,7 +150,7 @@ const config: Config = {
         },
         {
           type: "docSidebar", // 侧边栏文档链接
-          sidebarId: "tutorialSidebar", // 侧边栏 ID
+          sidebarId: "secondSidebar", // 侧边栏 ID
           position: "left", // 位置：左侧
           label: "场景方案", // 标签：场景方案
         },
@@ -198,7 +204,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} 流程平台2.0,智网信通旗下产品`, // 页脚版权信息
+      copyright: `Copyright © ${new Date().getFullYear()} my-website.0,智网信通旗下产品`, // 页脚版权信息
     },
     prism: {
       theme: prismThemes.github, // 代码高亮主题（白天模式）
@@ -218,10 +224,13 @@ const config: Config = {
         docsDir: ["docs", "community"], // 需要被索引的文档目录
         hideSearchBarWithNoSearchContext: true, // 如果没有搜索上下文，则隐藏搜索栏
         searchBarPosition: "auto", // 自动调整搜索栏位置
-      }
-    ]
-  ]
-}
+      },
+    ],
+  ],
+};
+
+export default config;
+
 ```
 
 ## 配置侧边栏 `sidebars.js`

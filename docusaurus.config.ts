@@ -74,7 +74,7 @@ const config: Config = {
         },
         {
           type: "docSidebar", // 侧边栏文档链接
-          sidebarId: "tutorialSidebar", // 侧边栏 ID
+          sidebarId: "secondSidebar", // 侧边栏 ID
           position: "left", // 位置：左侧
           label: "场景方案", // 标签：场景方案
         },

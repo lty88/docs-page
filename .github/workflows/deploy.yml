@@ -3,7 +3,7 @@ name: Deploy Docusaurus website to GitHub Pages
 on:
   push:
     branches:
-      - master  # 监听 master 分支的变更
+      - master
 
 jobs:
   deploy:
@@ -15,24 +15,26 @@ jobs:
 
       # 2. 安装 pnpm
       - name: Setup pnpm
-        run: |
-          npm install -g pnpm
+        run: npm install -g pnpm
 
       # 3. 安装依赖
       - name: Install dependencies
-        run: |
-          pnpm install
+        run: pnpm install
 
       # 4. 构建网站
       - name: Build the website
-        run: |
-          pnpm run build
+        run: pnpm run build
 
-      # 5. 部署到 GitHub Pages
+      # 5. 清理 Git 工作区
+      - name: Cleanup workspace
+        run: |
+          git worktree prune
+          git gc --prune=now
+
+      # 6. 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages        # 部署到 gh-pages 分支
-          folder: build           # 指定 Docusaurus 构建输出的文件夹
-          clean: true             # 清理旧文件
-          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: build
+          clean: true

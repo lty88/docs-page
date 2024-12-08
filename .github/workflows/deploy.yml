@@ -32,6 +32,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          branch: gh-pages  # 部署到 `gh-pages` 分支
+          branch: master  # 部署到 `gh-pages` 分支
           folder: build  # 构建输出目录
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # 使用 GitHub 自动生成的 Token 进行身份验证

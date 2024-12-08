@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. 检出仓库代码
+      # 1. 检出代码
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -32,7 +32,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          branch: gh-pages        # 部署到 master 分支
-          folder: build         # 指定 Docusaurus 构建输出的文件夹
-          clean: true           # 清理旧文件
+          branch: gh-pages        # 部署到 gh-pages 分支
+          folder: build           # 指定 Docusaurus 构建输出的文件夹
+          clean: true             # 清理旧文件
           token: ${{ secrets.GITHUB_TOKEN }}

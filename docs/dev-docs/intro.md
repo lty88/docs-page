@@ -11,7 +11,7 @@ import Link from '@docusaurus/Link';
 # Docusaurus 开发文档
 
 :::tip 快速导航
-👉 [安装指南](installation) · [基础配置](configuration) · [插件使用](plugins) · [主题定制](customization)
+👉 [安装指南](./installation) · [基础配置](./configuration) · [插件使用](./plugins) · [主题定制](./customization)
 :::
 
 <div className="row margin-bottom--lg">
@@ -22,9 +22,9 @@ import Link from '@docusaurus/Link';
       </div>
       <div className="card__body">
         <ul>
-          <li><Link to="installation">安装教程</Link></li>
-          <li><Link to="configuration">基础配置</Link></li>
-          <li><Link to="plugins">插件使用</Link></li>
+          <li><Link to="./installation">安装教程</Link></li>
+          <li><Link to="./configuration">基础配置</Link></li>
+          <li><Link to="./plugins">插件系统</Link></li>
         </ul>
       </div>
     </div>
@@ -36,9 +36,9 @@ import Link from '@docusaurus/Link';
       </div>
       <div className="card__body">
         <ul>
-          <li><Link to="customization">主题定制</Link></li>
-          <li><Link to="deployment">部署指南</Link></li>
-          <li><Link to="writing-docs">文档编写</Link></li>
+          <li><Link to="./customization">主题定制</Link></li>
+          <li><Link to="./deployment">部署指南</Link></li>
+          <li><Link to="./writing-docs">文档编写</Link></li>
         </ul>
       </div>
     </div>

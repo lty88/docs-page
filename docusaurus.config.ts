@@ -145,11 +145,14 @@ const config: Config = {
       require.resolve("@easyops-cn/docusaurus-search-local"),
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} 配置搜索插件的选项 */
       {
-        hashed: true, // 启用哈希 URL，以提高缓存性能并加速查找
-        docsRouteBasePath: ["docs", "community"], // 搜索功能应用的路径（包括 'docs' 和 'community'）
-        docsDir: ["docs", "community"], // 需要被索引的文档目录
-        hideSearchBarWithNoSearchContext: true, // 如果没有搜索上下文，则隐藏搜索栏
-        searchBarPosition: "auto", // 自动调整搜索栏位置
+        hashed: true,
+        docsRouteBasePath: "/",
+        docsDir: "docs",
+        hideSearchBarWithNoSearchContext: true,
+        searchBarPosition: "auto",
+        language: ["zh"],
+        indexDocs: true,
+        indexBlog: true,
       },
     ],
   ],

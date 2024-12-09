@@ -10,7 +10,7 @@ sidebar_position: 2
 
 1. **获取编辑权限**
    - 联系技术团队获取代码仓库访问权限
-   - 安装 Visual Studio Code 编辑器
+   - 安装 [Typora](https://www.typora.io/) or [VSCode](https://code.visualstudio.com/) 编辑器
 
 2. **熟悉工作目录**
    ```bash
@@ -29,6 +29,7 @@ sidebar_position: 2
 2. **创建文档文件**
    ```markdown
    ---
+   id: quick-start
    sidebar_position: 1
    title: 我的第一篇文档
    description: 这是一个示例文档

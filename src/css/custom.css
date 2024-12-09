@@ -28,3 +28,48 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* 侧边栏容器 */
+.theme-doc-sidebar-container {
+  background-color: var(--ifm-background-surface-color);
+  border-right: 1px solid var(--ifm-toc-border-color);
+}
+
+/* 侧边栏菜单项 */
+.menu__link {
+  padding: 0.5rem 0.75rem;
+}
+
+/* 激活状态的菜单项 */
+.menu__link--active {
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+}
+
+/* 分类标题 */
+.menu__list-item-collapsible {
+  font-weight: bold;
+}
+
+/* 侧边栏分类展开/折叠图标 */
+.menu__caret:before {
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
+}
+
+/* 移动端样式 */
+@media (max-width: 996px) {
+  .theme-doc-sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
+}
+
+/* 桌面端样式 */
+@media (min-width: 997px) {
+  .theme-doc-sidebar-container {
+    width: 300px; /* 自定义侧边栏宽度 */
+  }
+}

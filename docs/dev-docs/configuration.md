@@ -124,9 +124,9 @@ themeConfig: {
     items: [
       {
         type: 'docSidebar',
-        sidebarId: 'tutorialSidebar',
+        sidebarId: 'devDocsSidebar',
         position: 'left',
-        label: '文档',
+        label: '文档???',
       },
       {
         href: 'https://github.com/your-repo',

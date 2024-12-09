@@ -10,32 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: '由 MDX 提供支持',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        让您节省时间、专注于文档编写。您只需采用 MDX 格式编写文档和博文， Docusaurus 就会将它们构建成静态的 HTML 文件供用户访问。 您甚至可以在 Markdown 中嵌入 React 组件，这一切都得益于 MDX。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '文档版本化',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+     让用户可以查看您的项目的所有版本的文档。文档版本化功能可以帮 您保持文档与项目版本的同步。
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '基于 React 构建',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        利用 React 组件可以为您的项目扩展或自定义页面布局。 得益于 Docusaurus 的插件架构，在设计您自己的 网站的同时，仍然能够重用由 Docusaurus 插件所创建的数据。
       </>
     ),
   },

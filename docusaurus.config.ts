@@ -36,7 +36,7 @@ const config: Config = {
           // 更新为你的实际 GitHub 仓库地址
           editUrl: 'https://github.com/lty88/docs-page/tree/main/',
           // 添加路由基础路径配置
-          routeBasePath: '/', // 这会让文档直接显示在根路径下
+          routeBasePath: 'docs', // 这会让文档直接显示在根路径下
         },
         blog: {
           showReadingTime: true, // 启用阅读时间显示
@@ -142,20 +142,24 @@ const config: Config = {
   // 该插件基于静态文件构建，会在打包过程中生成索引文件
   themes: [
     [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} 配置搜索插件的选项 */
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
       {
-        hashed: true,
-        docsRouteBasePath: "/",
-        docsDir: "docs",
-        hideSearchBarWithNoSearchContext: true,
-        searchBarPosition: "auto",
-        language: ["zh"],
-        indexDocs: true,
-        indexBlog: true,
-      },
-    ],
-  ],
+        hashed: true, // 启用哈希 URL，以提高缓存性能并加速查找
+        language: ["zh"], // 添加语言支持
+        docsRouteBasePath: 'docs',  // 修改这里：改为字符串而不是数组
+        docsDir: 'docs',  // 修改这里：改为字符串而不是数组
+        hideSearchBarWithNoSearchContext: true, // 如果没有搜索上下文，则隐藏搜索栏
+        searchContextByPaths: [
+          {
+            label: '文档', // 自定义标签名称
+            path: 'docs', // 自定义文档路径
+          },
+        ],
+        searchBarPosition: 'auto', // 搜索栏位置配置
+      }
+    ]
+  ]
 };
 
 export default config;

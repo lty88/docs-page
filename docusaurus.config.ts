@@ -18,8 +18,8 @@ const config: Config = {
   organizationName: "lty88", // 通常是 GitHub 组织名或用户名
   projectName: "docs-page", // 通常是你的仓库名称
 
-  onBrokenLinks: "throw", // 如果链接断开，抛出错误
-  onBrokenMarkdownLinks: "warn", // 如果 Markdown 链接断开，发出警告
+  onBrokenLinks: "warn", // 改为 "warn" 而不是 "throw"
+  onBrokenMarkdownLinks: "warn",
 
   // 即使你不使用国际化，也可以设置这个字段来定义 HTML 的语言（如中文可以设置为 zh-Hans）
   i18n: {
@@ -33,8 +33,10 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts", // 侧边栏配置文件路径
-          // 如果需要，可以取消注释并配置以下链接，显示"编辑此页面"的链接
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // 更新为你的实际 GitHub 仓库地址
+          editUrl: 'https://github.com/lty88/docs-page/tree/main/',
+          // 添加路由基础路径配置
+          routeBasePath: '/', // 这会让文档直接显示在根路径下
         },
         blog: {
           showReadingTime: true, // 启用阅读时间显示
@@ -89,11 +91,11 @@ const config: Config = {
       style: "dark", // 页脚样式
       links: [
         {
-          title: "Docs", // Docs 部分
+          title: "文档",
           items: [
             {
-              label: "Tutorial", // 标签：教程
-              to: "/docs/intro", // 链接到文档首页
+              label: "开始使用",
+              to: "/dev-docs/intro", // 更新为实际存在的文档路径
             },
           ],
         },

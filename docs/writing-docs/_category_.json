@@ -1,0 +1,11 @@
+{
+  "label": "运营文档编写指南",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "这个系列教程将帮助运营人员快速掌握文档编写技巧，包含从入门到进阶的完整指南。",
+    "slug": "/category/writing-docs",
+    "keywords": ["运营", "文档", "教程", "指南"]
+  },
+  "className": "writing-docs-category"
+}

@@ -6,7 +6,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "my-website", // 网站标题
-  tagline: "yunyi are cool", // 网站标语
+  tagline: "website are cool", // 网站标语
   favicon: "img/logo.svg", // 网站图标
 
   // 设置生产环境下站点的 URL
@@ -33,7 +33,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts", // 侧边栏配置文件路径
-          // 如果需要，可以取消注释并配置以下链接，显示“编辑此页面”的链接
+          // 如果需要，可以取消注释并配置以下链接，显示"编辑此页面"的链接
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
@@ -42,7 +42,7 @@ const config: Config = {
             type: ["rss", "atom"], // 启用 RSS 和 Atom 格式的博客订阅
             xslt: true, // 启用 XSLT
           },
-          // 如果需要，可以取消注释并配置以下链接，显示“编辑此博客”的链接
+          // 如果需要，可以取消注释并配置以下链接，显示"编辑此博客"的链接
           // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // 以下选项可以确保符合最佳的博客实践
           onInlineTags: "warn", // 如果博客中包含内联标签，发出警告
@@ -67,16 +67,16 @@ const config: Config = {
       },
       items: [
         {
-          type: "docSidebar", // 侧边栏文档链接
-          sidebarId: "tutorialSidebar", // 侧边栏 ID
-          position: "left", // 位置：左侧
-          label: "帮助文档", // 标签：帮助文档
+          type: "docSidebar",
+          sidebarId: "devDocsSidebar",
+          position: "left",
+          label: "开发文档",
         },
         {
-          type: "docSidebar", // 侧边栏文档链接
-          sidebarId: "secondSidebar", // 侧边栏 ID
-          position: "left", // 位置：左侧
-          label: "场景方案", // 标签：场景方案
+          type: "docSidebar",
+          sidebarId: "writingDocsSidebar",
+          position: "left",
+          label: "运营文档",
         },
         {
           href: "http://localhost:3000/workbench", // 链接到平台
@@ -128,7 +128,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} my-website.0,智网信通旗下产品`, // 页脚版权信息
+      copyright: `Copyright © ${new Date().getFullYear()} xxxxx,页脚版权信息`, // 页脚版权信息
     },
     prism: {
       theme: prismThemes.github, // 代码高亮主题（白天模式）
